@@ -49,6 +49,8 @@ table {
 
 * {
     box-sizing: border-box;
+    color: rgb(225, 239, 230);
+    max-width: 100%;
 }
 
 html {
@@ -91,12 +93,31 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}  
+header h1{
+    text-align: center;
+    background-color: rgb(0, 4, 17, .8);
+}
+header nav{
+    background-color: rgb(0, 4, 17, .8);
+    height: 14rem;
+}
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.icons{     
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-around; 
+     padding: 1.5% 40%;
 }
 
 /* spacers */
 .spacer {
     width: 100%;
-    height: 20vh;
+    height: 30vh;
     background-color: rgb(0, 4, 17);
 }
 .spacer-sm {
@@ -110,9 +131,19 @@ header {
     width: 100%;
     height: 100vh;
     text-align: center;
-    background-color: rgb(0, 4, 17);
+    background-color: rgb(0, 4, 17);   
 }
-
+.foodpics{
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    margin: 0 20rem;
+    height: 100rem;
+}
+.foodpics div{
+    /* height: 33rem; */
+    
+}
 /* about us section */
 .about {
     width: 100%;
@@ -194,18 +225,78 @@ footer {
     height: 15vh;
     padding-top: 2.5vh;
     font-size: 3rem;
+    background-color: rgb(0, 4, 17);
+    display: flex;
+    justify-content: space-between;
 }
-
+footer .links{
+    width: 112rem;
+    background-color: rgb(0, 4, 17);
+    display: flex;
+    margin-right: 5rem;
+    justify-content: space-around;
+}
+.copyright p{
+    background-color: rgb(0, 4, 17);
+    font-size: 1.6rem;
+    padding-top: 4rem;
+    padding-left: 55rem;
+}
+.idb h3{
+    padding-left: 10rem;
+    font-size: 4rem;
+}
+.idb div{
+    display: flex;
+    margin-left: 1.5rem;    
+    height: 4vh;
+    
+}
+.idb div input{
+    width: 38rem;
+    padding: 0%;
+    font-size: 3rem;
+}
+.idb div button{
+    width: 15rem;
+}
 /* mobile media query */
 @media (max-width: 428px) {
     /* header section */
-    
-
+   .links{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 4, 17, .8);
+   }
+   .icons{
+    background-color: rgb(0, 4, 17, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+   }
+   h1{
+    font-size: 5rem;
+    padding: 0 3rem;
+    text-align: center;
+   }
+   .icons a,i{
+    padding: 0 .3rem ;
+      }
     /* gallery section */
     .gallery {
         height: auto;
     }
-    
+    .foodpics{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin: 0;   
+    }
+    .foodpics div{
+        padding-bottom: 3.5rem;
+    }
     /* about us section */
 
     .about {
@@ -249,5 +340,39 @@ footer {
         height: auto;
         padding-top: 2.5vh;
         font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+    footer .idb h3{
+        padding-left: 0;
+        text-align: center;
+        font-size: 3rem;
+        padding-bottom: 1rem;
+    }
+    .copyright p{
+        padding-top: 0;
+        padding-left: 0;
+    }
+    .idb div{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .idb div input{
+        height: 3vh;
+        padding: auto;
+        font-size: 2rem;
+    }
+    .idb div button{
+        width: 38rem;
+        padding: 0;
+        height: 3.3vh;     
+    }
+    footer .links{
+        padding: 1.5rem 0;
+    }
+    .copyright{
+        text-align: center;
+        padding: 0 6rem;
     }
 }
